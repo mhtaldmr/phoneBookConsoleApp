@@ -20,7 +20,7 @@ namespace ProjectOne.Menu.Actions
 
             var searchType = Convert.ToInt32(Console.ReadLine().Trim());
 
-            if(searchType == 1)
+            if (searchType == 1)
             {
                 Console.Write("Aramak istediğiniz ismi veya soyismi giriniz: ");
                 var nameToSearch = Convert.ToString(Console.ReadLine().Trim());
@@ -29,7 +29,7 @@ namespace ProjectOne.Menu.Actions
                 searchedPeople = listOfPeople.Where(p => p.Name == nameToSearch || p.Surname == nameToSearch).ToList();
 
             }
-            else if(searchType == 2)
+            else if (searchType == 2)
             {
                 Console.Write("Aramak istediğiniz telefonu giriniz: ");
                 var phoneToSearch = Convert.ToString(Console.ReadLine().Trim());
@@ -59,8 +59,6 @@ namespace ProjectOne.Menu.Actions
                 Console.WriteLine("Telefon : " + p.PhoneNumber);
                 Console.WriteLine("--");
             }
-
-
         }
     }
 }

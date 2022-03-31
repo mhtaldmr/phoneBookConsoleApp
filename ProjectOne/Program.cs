@@ -18,7 +18,12 @@ namespace ProjectOne
                 MenuList.MenuOpening();
                 
                 input = Convert.ToInt32(Console.ReadLine().Trim());
-                MenuList.Selector(input);
+                MenuList.Selector(input, Phonebook);
+
+                foreach (Person person in Phonebook)
+                {
+                    Console.WriteLine(person.Name);
+                }
             }
         }
     }

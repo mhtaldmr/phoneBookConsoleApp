@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ProjectOne
 {
@@ -16,13 +17,13 @@ namespace ProjectOne
 
         }
 
-        public static void Selector(int input)
+        public static void Selector(int input, List<Person> phonebook)
         {
             
             switch (input)
             {
                 case 1:
-                    Menu.PhoneAdd();
+                    Menu.PhoneAdd(phonebook);
                     break;
                 case 2:
                     Menu.PhoneDelete();

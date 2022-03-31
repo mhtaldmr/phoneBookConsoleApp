@@ -10,7 +10,7 @@ namespace ProjectOne
       
         
         /////////////// Add /////////////// 
-        public static void PhoneAdd()
+        public static void PhoneAdd(List<Person> listOfPeople)
         {
             Person newPerson = new();
 
@@ -26,7 +26,7 @@ namespace ProjectOne
             Console.WriteLine("Belirtilen kişi ve numara başarıyla rehbere eklendi.\n");
 
             
-
+            listOfPeople.Add(newPerson);
         }
 
 

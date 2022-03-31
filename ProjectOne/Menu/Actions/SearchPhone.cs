@@ -59,6 +59,8 @@ namespace ProjectOne.Menu.Actions
                 Console.WriteLine("Telefon : " + p.PhoneNumber);
                 Console.WriteLine("--");
             }
+
+
         }
     }
 }

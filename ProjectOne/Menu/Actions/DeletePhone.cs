@@ -10,7 +10,15 @@ namespace ProjectOne.Menu.Actions
     {
         public static void Delete(List<Person> listOfPeople)
         {
-            
+            Console.WriteLine("**********************************************");
+            Console.WriteLine("Silinecek kişinin ismini seçiniz!");
+            var nameToDelete = Convert.ToString(Console.ReadLine().Trim());
+
+            var personToDelete = listOfPeople.Where(p => p.Name == nameToDelete).SingleOrDefault();
+            listOfPeople.Remove(personToDelete);
+            Console.WriteLine(personToDelete.Name + " isimli kişi silinmiştir.\n");
+
+
         }
     }
 }

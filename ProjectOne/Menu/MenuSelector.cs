@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectOne.Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,29 +7,30 @@ using System.Threading.Tasks;
 
 namespace ProjectOne.Menu
 {
-    internal class MenuSelector
+    internal static class MenuSelector
     {
         public static void Selector(int input, List<Person> phonebook)
         {
+            OperationType selectedOperation = (OperationType)input;
 
-            switch (input)
+            switch (selectedOperation)
             {
-                case 1:
+                case OperationType.Add:
                     Menu.Actions.AddPhone.Add(phonebook);
                     break;
-                case 2:
+                case OperationType.Delete:
                     Menu.Actions.DeletePhone.Delete(phonebook);
                     break;
-                case 3:
+                case OperationType.Update:
                     Menu.Actions.UpdatePhone.Update(phonebook);
                     break;
-                case 4:
+                case OperationType.List:
                     Menu.Actions.ListPhone.Listed(phonebook);
                     break;
-                case 5:
+                case OperationType.Search:
                     Menu.Actions.SearchPhone.Search(phonebook);
                     break;
-                case 6:
+                case OperationType.Exit:
                     Console.WriteLine("\nÇıkış yapıldı..");
                     break;
                 default:

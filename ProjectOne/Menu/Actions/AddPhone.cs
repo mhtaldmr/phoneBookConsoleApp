@@ -13,6 +13,7 @@ namespace ProjectOne.Menu.Actions
         {
             Person newPerson = new();
 
+            Console.WriteLine("**********************************************");
             Console.Write("Lütfen isim giriniz:");
             newPerson.Name = Convert.ToString(Console.ReadLine());
 

@@ -10,6 +10,8 @@ namespace ProjectOne.Menu.Actions
     {
         public static void Listed(List<Person> listOfPeople)
         {
+            Console.WriteLine("Telefon Rehberi");
+            Console.WriteLine("**********************************************");
             foreach (Person person in listOfPeople)
             {
                 Console.WriteLine("--");

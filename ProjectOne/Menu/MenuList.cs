@@ -7,6 +7,7 @@ namespace ProjectOne
     {
         public static void List()
         {
+            Console.WriteLine("*******************************************");
             Console.WriteLine("Lütfen yapmak istediğiniz işlemi seçiniz :)");
             Console.WriteLine("*******************************************");
             Console.WriteLine("(1) Yeni Numara Kaydetmek");

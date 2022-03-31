@@ -15,15 +15,10 @@ namespace ProjectOne
             while (input != 6)
             {
 
-                MenuList.MenuOpening();
-                
+                MenuList.List();
                 input = Convert.ToInt32(Console.ReadLine().Trim());
-                MenuList.Selector(input, Phonebook);
+                Menu.MenuSelector.Selector(input, Phonebook);
 
-                foreach (Person person in Phonebook)
-                {
-                    Console.WriteLine(person.Name);
-                }
             }
         }
     }

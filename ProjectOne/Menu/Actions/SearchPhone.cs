@@ -10,6 +10,8 @@ namespace ProjectOne.Menu.Actions
     {
         public static void Search(List<Person> listOfPeople)
         {
+            var searchedPeople = listOfPeople.ToList();
+
             Console.WriteLine("**********************************************");
             Console.WriteLine("Aranacak istediğiniz tipi seçiniz!");
             Console.WriteLine("Aranacak istediğiniz tipi seçiniz!");
@@ -24,24 +26,8 @@ namespace ProjectOne.Menu.Actions
                 var nameToSearch = Convert.ToString(Console.ReadLine().Trim());
                 Console.WriteLine("--");
 
-                var searchedPeoplebyName = listOfPeople.Where(p => p.Name == nameToSearch || p.Surname == nameToSearch);
+                searchedPeople = listOfPeople.Where(p => p.Name == nameToSearch || p.Surname == nameToSearch).ToList();
 
-                if (!searchedPeoplebyName.Any())
-                {
-                    Console.WriteLine("Uygun kriterlerde kişi bulunamadı.");
-                    Console.WriteLine("--");
-                }
-
-
-                foreach (var p in searchedPeoplebyName)
-                {
-                    Console.WriteLine("İsim : " + p.Name);
-                    Console.WriteLine("Soyisim : " + p.Surname);
-                    Console.WriteLine("Telefon : " + p.PhoneNumber);
-                    Console.WriteLine("--");
-                }
-
-                
             }
             else if(searchType == 2)
             {
@@ -49,21 +35,7 @@ namespace ProjectOne.Menu.Actions
                 var phoneToSearch = Convert.ToString(Console.ReadLine().Trim());
                 Console.WriteLine("--");
 
-                var searchedPeoplebyPhone = listOfPeople.Where(p => p.PhoneNumber == phoneToSearch);
-
-                if(!searchedPeoplebyPhone.Any())
-                {
-                    Console.WriteLine("Uygun kriterlerde kişi bulunamadı.");
-                    Console.WriteLine("--");
-                }
-
-                foreach (var p in searchedPeoplebyPhone)
-                {
-                    Console.WriteLine("İsim : " + p.Name);
-                    Console.WriteLine("Soyisim : " + p.Surname);
-                    Console.WriteLine("Telefon : " + p.PhoneNumber);
-                    Console.WriteLine("--");
-                }
+                searchedPeople = listOfPeople.Where(p => p.PhoneNumber == phoneToSearch).ToList();
 
             }
             else
@@ -74,6 +46,19 @@ namespace ProjectOne.Menu.Actions
 
 
 
+            if (!searchedPeople.Any())
+            {
+                Console.WriteLine("Uygun kriterlerde kişi bulunamadı.");
+                Console.WriteLine("--");
+            }
+
+            foreach (var p in searchedPeople)
+            {
+                Console.WriteLine("İsim : " + p.Name);
+                Console.WriteLine("Soyisim : " + p.Surname);
+                Console.WriteLine("Telefon : " + p.PhoneNumber);
+                Console.WriteLine("--");
+            }
         }
     }
 }

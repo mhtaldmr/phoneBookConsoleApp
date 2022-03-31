@@ -52,13 +52,23 @@ namespace ProjectOne.Menu.Actions
                 Console.WriteLine("--");
             }
 
-            foreach (var p in searchedPeople)
-            {
-                Console.WriteLine("İsim : " + p.Name);
-                Console.WriteLine("Soyisim : " + p.Surname);
-                Console.WriteLine("Telefon : " + p.PhoneNumber);
-                Console.WriteLine("--");
+                foreach (var p in searchedPeoplebyPhone)
+                {
+                    Console.WriteLine("İsim : " + p.Name);
+                    Console.WriteLine("Soyisim : " + p.Surname);
+                    Console.WriteLine("Telefon : " + p.PhoneNumber);
+                    Console.WriteLine("--");
+                }
+
             }
+            else
+            {
+                Console.WriteLine("Yanlış seçim yaptınız. Yeniden Deneyiniz.");
+                Menu.Actions.SearchPhone.Search(listOfPeople);
+            }
+
+
+
         }
     }
 }

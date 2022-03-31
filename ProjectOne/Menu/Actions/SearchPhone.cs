@@ -26,7 +26,7 @@ namespace ProjectOne.Menu.Actions
 
                 var searchedPeoplebyName = listOfPeople.Where(p => p.Name == nameToSearch || p.Surname == nameToSearch);
 
-                if (searchedPeoplebyName.Count() == 0)
+                if (!searchedPeoplebyName.Any())
                 {
                     Console.WriteLine("Uygun kriterlerde kişi bulunamadı.");
                     Console.WriteLine("--");
@@ -46,12 +46,12 @@ namespace ProjectOne.Menu.Actions
             else if(searchType == 2)
             {
                 Console.Write("Aramak istediğiniz telefonu giriniz: ");
-                var phoneToSearch = Convert.ToInt32(Console.ReadLine().Trim());
+                var phoneToSearch = Convert.ToString(Console.ReadLine().Trim());
                 Console.WriteLine("--");
 
                 var searchedPeoplebyPhone = listOfPeople.Where(p => p.PhoneNumber == phoneToSearch);
 
-                if(searchedPeoplebyPhone.Count() == 0)
+                if(!searchedPeoplebyPhone.Any())
                 {
                     Console.WriteLine("Uygun kriterlerde kişi bulunamadı.");
                     Console.WriteLine("--");

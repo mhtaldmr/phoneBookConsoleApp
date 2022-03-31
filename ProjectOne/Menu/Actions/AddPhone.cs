@@ -21,7 +21,7 @@ namespace ProjectOne.Menu.Actions
             newPerson.Surname = Convert.ToString(Console.ReadLine());
 
             Console.Write("Lütfen telefon no giriniz:");
-            newPerson.PhoneNumber = Convert.ToInt32(Console.ReadLine().Trim());
+            newPerson.PhoneNumber = Convert.ToString(Console.ReadLine().Trim());
 
             Console.WriteLine("\nBelirtilen kişi ve numara başarıyla rehbere eklendi.\n");
 

@@ -46,7 +46,7 @@ namespace ProjectOne.Menu.Actions
             else if(searchType == 2)
             {
                 Console.Write("Aramak istediğiniz telefonu giriniz: ");
-                var phoneToSearch = Convert.ToInt32(Console.ReadLine().Trim());
+                var phoneToSearch = Convert.ToString(Console.ReadLine().Trim());
                 Console.WriteLine("--");
 
                 var searchedPeoplebyPhone = listOfPeople.Where(p => p.PhoneNumber == phoneToSearch);

@@ -10,6 +10,8 @@ namespace ProjectOne
         
         public static void Main()
         {
+            //initial members
+            Entity.DefaultList.DefaultPhoneBook(Phonebook);
 
             int input = 0;
             while (input != 6)
@@ -21,5 +23,7 @@ namespace ProjectOne
 
             }
         }
+
+      
     }
 }

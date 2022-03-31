@@ -24,7 +24,7 @@ namespace ProjectOne.Menu.Actions
                 var nameToSearch = Convert.ToString(Console.ReadLine().Trim());
                 Console.WriteLine("--");
 
-                var searchedPeoplebyName = listOfPeople.Where(p => p.Name == nameToSearch || p.Surname == nameToSearch);
+                var searchedPeoplebyName = listOfPeople.Where(p => p.Name == nameToSearch || p.Surname == nameToSearch).ToList();
 
                 if (!searchedPeoplebyName.Any())
                 {
@@ -49,7 +49,7 @@ namespace ProjectOne.Menu.Actions
                 var phoneToSearch = Convert.ToString(Console.ReadLine().Trim());
                 Console.WriteLine("--");
 
-                var searchedPeoplebyPhone = listOfPeople.Where(p => p.PhoneNumber == phoneToSearch);
+                var searchedPeoplebyPhone = listOfPeople.Where(p => p.PhoneNumber == phoneToSearch).ToList();
 
                 if(!searchedPeoplebyPhone.Any())
                 {

@@ -1,34 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using static ProjectOne.Program;
+
 
 namespace ProjectOne
 {
-    internal class Menu
+    public static class Menu
     {
 
-
+      
         
         /////////////// Add /////////////// 
         public static void PhoneAdd()
         {
-
-            Console.WriteLine("Phone Added");
+            Person newPerson = new();
 
             Console.Write("Lütfen isim giriniz:");
-            string userName = Convert.ToString(Console.ReadLine());
+            newPerson.Name = Convert.ToString(Console.ReadLine());
 
             Console.Write("Lütfen soyisim giriniz:");
-            string userSurname = Convert.ToString(Console.ReadLine());
+            newPerson.Surname = Convert.ToString(Console.ReadLine());
 
             Console.Write("Lütfen telefon no giriniz:");
-            int phone = Convert.ToInt32(Console.ReadLine().Trim());
+            newPerson.PhoneNumber = Convert.ToInt32(Console.ReadLine().Trim());
 
-            Console.WriteLine("Belirtilen kişi ve numara başarıyla rehbere eklendi.");
+            Console.WriteLine("Belirtilen kişi ve numara başarıyla rehbere eklendi.\n");
+
+            
+
         }
 
 
@@ -36,7 +34,7 @@ namespace ProjectOne
         /////////////// Search /////////////// 
         public static void PhoneSearch()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Searched");
         }
 
 
@@ -44,7 +42,7 @@ namespace ProjectOne
         /////////////// List /////////////// 
         public static void PhoneListed()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Listed");
         }
 
 
@@ -52,14 +50,14 @@ namespace ProjectOne
         /////////////// Update /////////////// 
         public static void PhoneUpdate()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Updated");
         }
 
 
         /////////////// Delete /////////////// 
         public static void PhoneDelete()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Deleted");
         }
     }
 }

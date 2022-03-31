@@ -3,17 +3,23 @@ using System.Collections.Generic;
 
 namespace ProjectOne
 {
-    internal partial class Program
+    class Program
     {
-        static void Main()
+        
+        public static List<Person> Phonebook = new();
+        
+        public static void Main()
         {
 
+            int input = 0;
+            while (input != 6)
+            {
 
-            MenuList.MenuOpening();
-            MenuList.Selector();
-
-
-
+                MenuList.MenuOpening();
+                
+                input = Convert.ToInt32(Console.ReadLine().Trim());
+                MenuList.Selector(input);
+            }
         }
     }
 }

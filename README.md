@@ -16,13 +16,13 @@ In the project the main theme is a PhoneBook list with a few options.
 -  Getting the input from user in the terminal and searching in the list.
 ```c
 	var searchType = Convert.ToInt32(Console.ReadLine().Trim());
-    if (searchType == 1)
-    {
-	    Console.Write("Aramak istediğiniz ismi veya soyismi giriniz: ");
-        var nameToSearch = Convert.ToString(Console.ReadLine().Trim());
-        Console.WriteLine("--");
+	if (searchType == 1)
+	{
+		Console.Write("Aramak istediğiniz ismi veya soyismi giriniz: ");
+		var nameToSearch = Convert.ToString(Console.ReadLine().Trim());
+		Console.WriteLine("--");
 
-        searchedPeople = listOfPeople.Where(p => p.Name == nameToSearch || p.Surname == nameToSearch).ToList();
+		searchedPeople = listOfPeople.Where(p => p.Name == nameToSearch || p.Surname == nameToSearch).ToList();
 	}
 ```
 
@@ -43,12 +43,16 @@ In the project the main theme is a PhoneBook list with a few options.
 
 ## Usage
 - After run the project in the terminal, screen will be shown:
+<br>
 <img src="https://github.com/mhtaldmr/phoneBookConsoleApp/blob/main/src/menu.PNG" alt="menu" />
 - To add a new record
+<br>
 <img src="https://github.com/mhtaldmr/phoneBookConsoleApp/blob/main/src/adding.PNG" alt="menu" />
-- To add a update a record
+- To update a record
+<br>
 <img src="https://github.com/mhtaldmr/phoneBookConsoleApp/blob/main/src/update.PNG" alt="menu" />
-- To add a list a record
+- To list a record
+<br>
 <img src="https://github.com/mhtaldmr/phoneBookConsoleApp/blob/main/src/listing.PNG" alt="menu" />
 
 ---

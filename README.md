@@ -45,7 +45,7 @@ In the project the main theme is a PhoneBook list with a few options.
 - After run the project in the terminal, screen will be shown:
 <img src="https://github.com/mhtaldmr/phoneBookConsoleApp/blob/main/src/menu.PNG" alt="menu" />
 - To add a new record
-<img src="https://github.com/mhtaldmr/phoneBookConsoleApp/blob/main/src/add.PNG" alt="menu" />
+<img src="https://github.com/mhtaldmr/phoneBookConsoleApp/blob/main/src/adding.PNG" alt="menu" />
 - To add a update a record
 <img src="https://github.com/mhtaldmr/phoneBookConsoleApp/blob/main/src/update.PNG" alt="menu" />
 - To add a list a record
